@@ -38,7 +38,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Reference only the local module entry `/src/main.tsx`; add no third-party `<script>` tags and self-host all assets.
     - _Requirements: 2.4, 9.6_
 
-  - [ ] 1.5 Append-only edit to `.gitignore`
+  - [x] 1.5 Append-only edit to `.gitignore`
     - Only append entries; preserve every existing entry and do not reorder.
     - Ensure no entry ignores the `.kiro/` directory; ensure `node_modules` and the build output directory (`dist`) are ignored (append only if not already covered).
     - _Requirements: 1.4, 1.5, 1.6_
