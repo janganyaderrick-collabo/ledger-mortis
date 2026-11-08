@@ -27,7 +27,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Ensure the `tsc` type-check covers test files as well as application sources.
     - _Requirements: 2.2, 5.1, 5.3, 5.4, 7.3_
 
-  - [ ] 1.3 Install testing, lint, and format dependencies and add the Prettier config
+  - [x] 1.3 Install testing, lint, and format dependencies and add the Prettier config
     - Install dev dependencies: `vitest`, `fast-check`, `@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`, `jsdom`, `eslint` and the TypeScript/React ESLint plugins, `prettier`, `eslint-config-prettier`.
     - Write `.prettierrc.json` with the project formatting config.
     - Confirm the pinned Node engine range matches the installed Vite and Vitest versions.
