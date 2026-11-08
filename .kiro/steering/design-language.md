@@ -7,3 +7,4 @@ Data-to-visual rules: tombstone size = amount, ghost = recurring charge, fog den
 lit window = day under budget. Do not add decorations that carry no meaning.
 Motion: subtle; respect prefers-reduced-motion. No audio by default.
 Accessibility: every visual has a text equivalent; full keyboard use; Lights-On mode shows the same data plainly.
+blood-text #FF6B5B (red for normal-size text; use blood #C0392B only for fills, borders and large text)
