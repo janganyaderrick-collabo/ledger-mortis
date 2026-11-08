@@ -369,7 +369,7 @@ deterministic), so this is an example/integration-style test.
 
 ```jsonc
 {
-  "engines": { "node": "^20.19.0 || >=22.12.0" }, // Req 7.7, documented in README (Req 11.5)
+  "engines": { "node": "^22.12.0 || ^24.0.0 || >=26.0.0" }, // Req 7.7, documented in README (Req 11.5)
   "scripts": {
     "dev": "vite",                                  // Req 7.1
     "build": "tsc -b && vite build",                // Req 7.2, 7.3 (type-check in build)
@@ -380,7 +380,7 @@ deterministic), so this is an example/integration-style test.
 }
 ```
 
-The Node engine is pinned to `^20.19.0 || >=22.12.0`, the current Vite/Vitest-compatible range, and
+The Node engine is pinned to `^22.12.0 || ^24.0.0 || >=26.0.0`, the current Vite/Vitest-compatible range, and
 the exact same string is documented in the README (Req 11.5). The design records the value; the
 implementing task must confirm it against the installed Vite and Vitest versions.
 

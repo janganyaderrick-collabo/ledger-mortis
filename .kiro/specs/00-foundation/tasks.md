@@ -18,7 +18,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Do NOT run the Vite scaffolder in place in the repository root. Instead, either write the scaffold files manually, OR scaffold into a temporary folder and copy across everything EXCEPT `README.md`, `.gitignore`, and `LICENSE` (to avoid clobbering the existing ones); never overwrite `.kiro/`.
     - Delete the Vite template leftovers after copying: `App.css`, `index.css`, `src/assets/react.svg`, `public/vite.svg`, and any template-provided ESLint config.
     - Write `package.json` with scripts: `dev` → `vite`, `build` → `tsc -b && vite build`, `test` → `vitest run`, `lint` → `eslint . --max-warnings 0`, `format` → `prettier --write .`.
-    - Add `"engines": { "node": "^20.19.0 || >=22.12.0" }`.
+    - Add `"engines": { "node": "^22.12.0 || ^24.0.0 || >=26.0.0" }`.
     - _Requirements: 2.1, 2.3, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7_
 
   - [x] 1.2 Configure TypeScript (strict), Vite, and Vitest
@@ -129,7 +129,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
 - [ ] 7. Write the README skeleton and the repo-conformance test
   - [ ] 7.1 Write the README skeleton
     - Update the root `README.md` with: a section on what Ledger Mortis is; a "how to run" section covering the `dev`/`build`/`test`/`lint`/`format` scripts; a project-structure section; a privacy statement that user transaction data never leaves the browser.
-    - Document the Node engine version matching `package.json` (`^20.19.0 || >=22.12.0`) and the integer-minor-units-with-explicit-currency money convention.
+    - Document the Node engine version matching `package.json` (`^22.12.0 || ^24.0.0 || >=26.0.0`) and the integer-minor-units-with-explicit-currency money convention.
     - Add a "Disclosures" section stating the project was newly created during the submission period, listing the starter template and libraries used, and stating that no pre-existing code is included.
     - _Requirements: 2.5, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7_
 
