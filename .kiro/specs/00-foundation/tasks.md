@@ -21,7 +21,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Add `"engines": { "node": "^20.19.0 || >=22.12.0" }`.
     - _Requirements: 2.1, 2.3, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7_
 
-  - [ ] 1.2 Configure TypeScript (strict), Vite, and Vitest
+  - [x] 1.2 Configure TypeScript (strict), Vite, and Vitest
     - Write `tsconfig.json` with `"strict": true` plus standard Vite React settings, and `tsconfig.node.json` for the Vite config.
     - Write `vite.config.ts` with the React plugin and a Vitest `test` block using `environment: 'jsdom'` and a setup file that imports `@testing-library/jest-dom`; do NOT enable `globals` (tests import `describe`/`it`/`expect` from `vitest`).
     - Ensure the `tsc` type-check covers test files as well as application sources.
