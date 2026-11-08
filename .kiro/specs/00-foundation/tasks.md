@@ -14,7 +14,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
 ## Tasks
 
 - [ ] 1. Scaffold the Vite + React + TypeScript project and wire the toolchain in the repo root
-  - [ ] 1.1 Create the base scaffold and `package.json` with scripts and engines
+  - [x] 1.1 Create the base scaffold and `package.json` with scripts and engines
     - Do NOT run the Vite scaffolder in place in the repository root. Instead, either write the scaffold files manually, OR scaffold into a temporary folder and copy across everything EXCEPT `README.md`, `.gitignore`, and `LICENSE` (to avoid clobbering the existing ones); never overwrite `.kiro/`.
     - Delete the Vite template leftovers after copying: `App.css`, `index.css`, `src/assets/react.svg`, `public/vite.svg`, and any template-provided ESLint config.
     - Write `package.json` with scripts: `dev` → `vite`, `build` → `tsc -b && vite build`, `test` → `vitest run`, `lint` → `eslint . --max-warnings 0`, `format` → `prettier --write .`.
