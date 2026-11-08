@@ -84,6 +84,18 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1794174397479
       }
+    ],
+    "2. Create the canonical folder layout with `.gitkeep` files": [
+      {
+        "executionId": "c3ba2fe9-d787-4d92-81ce-798c435c8eaa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794179318092
+      },
+      {
+        "executionId": "c3ba2fe9-d787-4d92-81ce-798c435c8eaa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794179480883
+      }
     ]
   }
 }

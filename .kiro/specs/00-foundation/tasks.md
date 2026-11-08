@@ -50,7 +50,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - **Validates: Requirements 8.1, 8.2, 8.3**
     - _Requirements: 8.1, 8.2, 8.3_
 
-- [ ] 2. Create the canonical folder layout with `.gitkeep` files
+- [x] 2. Create the canonical folder layout with `.gitkeep` files
   - Create `src/core/model`, `src/core/parsers`, `src/core/analysis`, `src/ui/graveyard`, `src/ui/exorcism`, `src/ui/import`, `src/ui/a11y`, and `src/samples`.
   - Place a `.gitkeep` file in each of these eight folders so git tracks each directory.
   - Create no implementation code in these folders.
