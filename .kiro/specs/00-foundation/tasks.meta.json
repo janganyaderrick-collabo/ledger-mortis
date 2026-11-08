@@ -1,5 +1,10 @@
 {
-  "pbtResults": {},
+  "pbtResults": {
+    "1.6 Add the placeholder property-based test proving fast-check runs (Property 1)": {
+      "status": "passed",
+      "lastRunTimestamp": 1794174297693
+    }
+  },
   "executionHistory": {
     "1.1 Create the base scaffold and `package.json` with scripts and engines": [
       {
@@ -59,6 +64,25 @@
         "executionId": "adf2aad8-91ea-4625-8441-ca79675fd076",
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1794172553441
+      }
+    ],
+    "1.6 Add the placeholder property-based test proving fast-check runs (Property 1)": [
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174217214
+      },
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174397246
+      }
+    ],
+    "1. Scaffold the Vite + React + TypeScript project and wire the toolchain in the repo root": [
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174397479
       }
     ]
   }

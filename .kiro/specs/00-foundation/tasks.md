@@ -13,7 +13,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
 
 ## Tasks
 
-- [ ] 1. Scaffold the Vite + React + TypeScript project and wire the toolchain in the repo root
+- [x] 1. Scaffold the Vite + React + TypeScript project and wire the toolchain in the repo root
   - [x] 1.1 Create the base scaffold and `package.json` with scripts and engines
     - Do NOT run the Vite scaffolder in place in the repository root. Instead, either write the scaffold files manually, OR scaffold into a temporary folder and copy across everything EXCEPT `README.md`, `.gitignore`, and `LICENSE` (to avoid clobbering the existing ones); never overwrite `.kiro/`.
     - Delete the Vite template leftovers after copying: `App.css`, `index.css`, `src/assets/react.svg`, `public/vite.svg`, and any template-provided ESLint config.
@@ -43,7 +43,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Ensure no entry ignores the `.kiro/` directory; ensure `node_modules` and the build output directory (`dist`) are ignored (append only if not already covered).
     - _Requirements: 1.4, 1.5, 1.6_
 
-  - [ ] 1.6 Add the placeholder property-based test proving fast-check runs (Property 1)
+  - [x] 1.6 Add the placeholder property-based test proving fast-check runs (Property 1)
     - Create `src/core/placeholder.property.test.ts` using fast-check; assert `reverse(reverse(xs)) === xs` for arbitrary integer arrays with at least 100 generated inputs.
     - Import `describe`/`it`/`expect` from `vitest`; tag with `// Feature: 00-foundation, Property 1: ...`.
     - **Property 1: The property-based testing toolchain executes end to end**
