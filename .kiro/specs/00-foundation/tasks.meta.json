@@ -36,6 +36,18 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1794165661567
       }
+    ],
+    "1.4 Create `index.html` with language, viewport, title, and no third-party scripts": [
+      {
+        "executionId": "aa4579f7-cccf-4213-b371-6df20512dfc0",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794171015538
+      },
+      {
+        "executionId": "aa4579f7-cccf-4213-b371-6df20512dfc0",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794171152879
+      }
     ]
   }
 }

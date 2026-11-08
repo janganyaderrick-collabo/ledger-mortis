@@ -33,7 +33,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Confirm the pinned Node engine range matches the installed Vite and Vitest versions.
     - _Requirements: 5.1, 5.2, 5.3, 6.1, 6.2_
 
-  - [ ] 1.4 Create `index.html` with language, viewport, title, and no third-party scripts
+  - [x] 1.4 Create `index.html` with language, viewport, title, and no third-party scripts
     - Set `lang="en"` on `<html>`, include a viewport meta tag, set the title to "Ledger Mortis".
     - Reference only the local module entry `/src/main.tsx`; add no third-party `<script>` tags and self-host all assets.
     - _Requirements: 2.4, 9.6_
