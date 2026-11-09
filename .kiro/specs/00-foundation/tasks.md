@@ -57,7 +57,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
   - _Requirements: 3.1, 3.2, 3.3, 3.4, 13.1, 13.2_
 
 - [ ] 3. Enforce the purity boundary with ESLint and prove it with a permanent test
-  - [ ] 3.1 Write the ESLint flat config enforcing the purity and network bans
+  - [x] 3.1 Write the ESLint flat config enforcing the purity and network bans
     - Add a top-level `ignores` block for `dist` and `coverage`.
     - For all of `src/**/*.{ts,tsx}`: forbid the network globals `fetch`, `XMLHttpRequest`, `WebSocket`, `EventSource`, and forbid `navigator.sendBeacon` plus `window`/`globalThis`/`self`.fetch via `no-restricted-syntax`.
     - For `src/core/**/*.{ts,tsx}`: additionally forbid imports of `react`/`react-dom` and use of `window`, `document`, `localStorage` (restating the network globals so core carries the full set).
