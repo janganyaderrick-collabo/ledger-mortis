@@ -73,7 +73,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
 
 - [ ] 4. Implement the pure WCAG contrast function and its tests
-  - [ ] 4.1 Implement `src/ui/a11y/contrast.ts` (pure TypeScript)
+  - [x] 4.1 Implement `src/ui/a11y/contrast.ts` (pure TypeScript)
     - Implement `parseHex` (validating `#RRGGBB` and throwing a descriptive `Error` on malformed input), `relativeLuminance`, and symmetric `contrastRatio` returning values in `[1, 21]`.
     - Export `AA_NORMAL = 4.5` and `AA_LARGE_UI = 3.0`; use no React, DOM, or network.
     - _Requirements: 10.5_
