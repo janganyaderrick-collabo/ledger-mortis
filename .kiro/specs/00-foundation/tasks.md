@@ -78,7 +78,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Export `AA_NORMAL = 4.5` and `AA_LARGE_UI = 3.0`; use no React, DOM, or network.
     - _Requirements: 10.5_
 
-  - [ ] 4.2 Write the contrast property-based test (Property 3)
+  - [x] 4.2 Write the contrast property-based test (Property 3)
     - Create `src/ui/a11y/contrast.property.test.ts` using fast-check (min 100 inputs).
     - Assert known reference ratios within tolerance (black/white = 21:1, color vs itself = 1:1), symmetry `contrastRatio(a,b) === contrastRatio(b,a)`, and bounds `[1, 21]` for generated colors; include the malformed-input error condition.
     - **Property 3: The contrast function matches known reference ratios (verify, do not assume)**
