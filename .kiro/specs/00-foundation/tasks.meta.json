@@ -108,6 +108,25 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1794181233305
       }
+    ],
+    "3.2 Write the permanent node-environment test driving ESLint via its Node API": [
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216039846
+      },
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216723742
+      }
+    ],
+    "3. Enforce the purity boundary with ESLint and prove it with a permanent test": [
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216723961
+      }
     ]
   }
 }

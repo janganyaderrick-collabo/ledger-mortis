@@ -56,7 +56,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
   - Create no implementation code in these folders.
   - _Requirements: 3.1, 3.2, 3.3, 3.4, 13.1, 13.2_
 
-- [ ] 3. Enforce the purity boundary with ESLint and prove it with a permanent test
+- [x] 3. Enforce the purity boundary with ESLint and prove it with a permanent test
   - [x] 3.1 Write the ESLint flat config enforcing the purity and network bans
     - Add a top-level `ignores` block for `dist` and `coverage`.
     - For all of `src/**/*.{ts,tsx}`: forbid the network globals `fetch`, `XMLHttpRequest`, `WebSocket`, `EventSource`, and forbid `navigator.sendBeacon` plus `window`/`globalThis`/`self`.fetch via `no-restricted-syntax`.
@@ -64,7 +64,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Configure the lint script to run with `--max-warnings 0`.
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 6.1, 6.3, 6.4, 12.1_
 
-  - [ ] 3.2 Write the permanent node-environment test driving ESLint via its Node API
+  - [x] 3.2 Write the permanent node-environment test driving ESLint via its Node API
     - Create `tests/eslint-purity.test.ts` that uses the ESLint `ESLint` class / `lintText` over in-memory snippets with virtual file paths.
     - The test file MUST start with the directive comment `// @vitest-environment node`.
     - Install `@types/node`; ensure both Vitest's `include` pattern and the `tsc -b` type-check cover the `tests/` folder.
