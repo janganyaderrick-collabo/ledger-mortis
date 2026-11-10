@@ -122,6 +122,17 @@ describe('contrast reference values (fixed examples)', () => {
     expect(contrastRatio('#777777', '#FFFFFF')).toBeCloseTo(4.48, 2);
   });
 
+  // These pin the channel weights and the transfer curve independently of the implementation.
+  it.each([
+    ['#FF0000', 4.0],
+    ['#00FF00', 1.37],
+    ['#0000FF', 8.59],
+    ['#808080', 3.95],
+  ])('matches known ratio for %s against white (both argument orders)', (colourHex, expected) => {
+    expect(contrastRatio(colourHex, '#FFFFFF')).toBeCloseTo(expected, 2);
+    expect(contrastRatio('#FFFFFF', colourHex)).toBeCloseTo(expected, 2);
+  });
+
   it('weights channels green > red > blue', () => {
     const g = relativeLuminance('#00FF00');
     const r = relativeLuminance('#FF0000');
