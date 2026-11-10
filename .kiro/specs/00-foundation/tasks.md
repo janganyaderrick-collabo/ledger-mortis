@@ -72,7 +72,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Import `describe`/`it`/`expect` from `vitest`; add no violating fixture files to the repo.
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
 
-- [ ] 4. Implement the pure WCAG contrast function and its tests
+- [x] 4. Implement the pure WCAG contrast function and its tests
   - [x] 4.1 Implement `src/ui/a11y/contrast.ts` (pure TypeScript)
     - Implement `parseHex` (validating `#RRGGBB` and throwing a descriptive `Error` on malformed input), `relativeLuminance`, and symmetric `contrastRatio` returning values in `[1, 21]`.
     - Export `AA_NORMAL = 4.5` and `AA_LARGE_UI = 3.0`; use no React, DOM, or network.
@@ -85,7 +85,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - **Validates: Requirements 10.5**
     - _Requirements: 10.5_
 
-  - [ ] 4.3 Write the contrast table-driven example tests (Properties 4 and 5)
+  - [x] 4.3 Write the contrast table-driven example tests (Properties 4 and 5)
     - Create `src/ui/a11y/contrast.example.test.ts` iterating the fixed token/background tables.
     - Property 4: every normal-text token `{ bone, ember, ghost, blood-text }` on both `{ ink, fog }` backgrounds clears 4.5:1 (the 4×2 grid).
     - Property 5: `blood` on both `{ ink, fog }` backgrounds clears 3.0:1 only.
