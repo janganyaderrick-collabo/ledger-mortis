@@ -108,7 +108,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - _Requirements: 9.5_
 
 - [ ] 6. Build the token stylesheet, landing screen, and app entry, with the component test
-  - [ ] 6.1 Author `src/styles/tokens.css` design tokens and theme/motion blocks
+  - [x] 6.1 Author `src/styles/tokens.css` design tokens and theme/motion blocks
     - Define CSS variables: `--ink #0B0B14`, `--fog #1B1B2E`, `--bone #E8E2D0`, `--ember #FF7A1A`, `--ghost #7FE3D0`, `--blood #C0392B`, `--blood-text #FF6B5B`.
     - Add the default `--surface-bg`/`--surface-text` (ink/bone) and the `[data-theme='lights-on']` swap block (bone/ink).
     - Add a `@media (prefers-reduced-motion: reduce)` block that disables non-essential motion.
