@@ -114,7 +114,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Add a `@media (prefers-reduced-motion: reduce)` block that disables non-essential motion.
     - _Requirements: 9.2, 9.3, 10.1, 10.4_
 
-  - [ ] 6.2 Implement `src/ui/LandingScreen.tsx`, `src/App.tsx`, and `src/main.tsx`
+  - [x] 6.2 Implement `src/ui/LandingScreen.tsx`, `src/App.tsx`, and `src/main.tsx`
     - `LandingScreen` returns a `ReactElement`, displays the heading "Ledger Mortis", applies ink background / bone text via the token variables.
     - Render the Lights-On toggle as a real `<button>` with `aria-pressed` reflecting state, a visible text label, a visible focus indicator, and keyboard operability; on activation call `nextTheme` and write the result to `data-theme` on `document.documentElement`.
     - Wire `App.tsx` to render `LandingScreen` and `main.tsx` to mount `App` and import `tokens.css`.
