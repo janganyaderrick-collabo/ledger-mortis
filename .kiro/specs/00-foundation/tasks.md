@@ -96,7 +96,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - _Requirements: 10.2, 10.4, 10.5_
 
 - [ ] 5. Implement the pure theme reducer and its test
-  - [ ] 5.1 Implement `src/ui/theme.ts`
+  - [x] 5.1 Implement `src/ui/theme.ts`
     - Define `type Theme = 'dark' | 'lights-on'`; implement pure `nextTheme(current)` and `isLightsOn(theme)`; no DOM, no network.
     - _Requirements: 9.5_
 
