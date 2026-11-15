@@ -107,7 +107,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - **Validates: Requirements 9.5**
     - _Requirements: 9.5_
 
-- [ ] 6. Build the token stylesheet, landing screen, and app entry, with the component test
+- [x] 6. Build the token stylesheet, landing screen, and app entry, with the component test
   - [x] 6.1 Author `src/styles/tokens.css` design tokens and theme/motion blocks
     - Define CSS variables: `--ink #0B0B14`, `--fog #1B1B2E`, `--bone #E8E2D0`, `--ember #FF7A1A`, `--ghost #7FE3D0`, `--blood #C0392B`, `--blood-text #FF6B5B`.
     - Add the default `--surface-bg`/`--surface-text` (ink/bone) and the `[data-theme='lights-on']` swap block (bone/ink).
@@ -120,7 +120,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Wire `App.tsx` to render `LandingScreen` and `main.tsx` to mount `App` and import `tokens.css`.
     - _Requirements: 9.1, 9.2, 9.3, 9.4, 9.5, 10.1, 10.2, 10.3, 10.4_
 
-  - [ ] 6.3 Write the React Testing Library component test
+  - [x] 6.3 Write the React Testing Library component test
     - Create `src/ui/LandingScreen.test.tsx` importing `describe`/`it`/`expect` from `vitest`.
     - Assert the text "Ledger Mortis" is present; assert the toggle is a `button` with an accessible name and initial `aria-pressed="false"`.
     - Activate the toggle (click and keyboard) and assert `aria-pressed` flips `false → true → false`; assert activation updates `data-theme` on `document.documentElement`.
