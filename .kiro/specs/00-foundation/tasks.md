@@ -127,7 +127,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - _Requirements: 9.1, 9.7, 9.8, 10.3_
 
 - [ ] 7. Write the README skeleton and the repo-conformance test
-  - [ ] 7.1 Write the README skeleton
+  - [x] 7.1 Write the README skeleton
     - Update the root `README.md` with: a section on what Ledger Mortis is; a "how to run" section covering the `dev`/`build`/`test`/`lint`/`format` scripts; a project-structure section; a privacy statement that user transaction data never leaves the browser.
     - Document the Node engine version matching `package.json` (`^22.12.0 || ^24.0.0 || >=26.0.0`) and the integer-minor-units-with-explicit-currency money convention.
     - Add a "Disclosures" section stating the project was newly created during the submission period, listing the starter template and libraries used, and stating that no pre-existing code is included.
