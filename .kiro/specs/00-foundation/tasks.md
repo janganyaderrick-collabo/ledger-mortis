@@ -126,14 +126,14 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Activate the toggle (click and keyboard) and assert `aria-pressed` flips `false → true → false`; assert activation updates `data-theme` on `document.documentElement`.
     - _Requirements: 9.1, 9.7, 9.8, 10.3_
 
-- [ ] 7. Write the README skeleton and the repo-conformance test
+- [x] 7. Write the README skeleton and the repo-conformance test
   - [x] 7.1 Write the README skeleton
     - Update the root `README.md` with: a section on what Ledger Mortis is; a "how to run" section covering the `dev`/`build`/`test`/`lint`/`format` scripts; a project-structure section; a privacy statement that user transaction data never leaves the browser.
     - Document the Node engine version matching `package.json` (`^22.12.0 || ^24.0.0 || >=26.0.0`) and the integer-minor-units-with-explicit-currency money convention.
     - Add a "Disclosures" section stating the project was newly created during the submission period, listing the starter template and libraries used, and stating that no pre-existing code is included.
     - _Requirements: 2.5, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7_
 
-  - [ ] 7.2 Write the repo-conformance test that reads files from disk
+  - [x] 7.2 Write the repo-conformance test that reads files from disk
     - Create `tests/repo-conformance.test.ts` starting with the directive comment `// @vitest-environment node`; read files from disk and assert the following.
     - `index.html` has `lang="en"`, a viewport meta tag, the title "Ledger Mortis", and NO external `<script>` tags.
     - `tokens.css` declares all seven tokens with the exact hex values from the design (`ink #0B0B14`, `fog #1B1B2E`, `bone #E8E2D0`, `ember #FF7A1A`, `ghost #7FE3D0`, `blood #C0392B`, `blood-text #FF6B5B`), contains the `[data-theme='lights-on']` block, and a `prefers-reduced-motion` block.

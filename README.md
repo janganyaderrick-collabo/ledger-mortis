@@ -64,6 +64,7 @@ src/
   samples/                     empty, reserved for a later module
 tests/
   eslint-purity.test.ts        tests that enforce the lint boundaries
+  repo-conformance.test.ts     tests that check the repository against the spec
 .kiro/
   steering/                    project rules (tech, product, privacy, design language)
   specs/                       module specs
