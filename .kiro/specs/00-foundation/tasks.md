@@ -144,7 +144,7 @@ exorcism code is created — those folders exist empty with `.gitkeep` only.
     - Import `describe`/`it`/`expect` from `vitest`.
     - _Requirements: 1.5, 1.6, 2.3, 2.4, 2.5, 3.4, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 9.2, 9.6, 10.1, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7_
 
-- [ ] 8. Final verification — run the gates and asset-preservation checks
+- [x] 8. Final verification — run the gates and asset-preservation checks
   - Run `npm run lint` (expect zero errors and zero warnings), `npm test` (expect all tests passing, including Properties 1–5, the ESLint purity test, and the repo-conformance test `tests/repo-conformance.test.ts` which runs as part of `npm test`), and `npm run build` (expect a static build with zero errors); report results, including the conformance test result.
   - Confirm the folder layout: all eight named folders exist, each with a `.gitkeep`, and no parser/analysis/graveyard/import/exorcism implementation files exist.
   - Confirm the `.gitignore` edit is append-only, never ignores `.kiro/`, and ignores `node_modules` and the build output directory.

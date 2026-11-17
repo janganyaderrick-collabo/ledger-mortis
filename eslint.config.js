@@ -40,14 +40,12 @@ const networkGlobals = [
 const networkSyntax = [
   {
     selector: "MemberExpression[property.name='sendBeacon']",
-    message:
-      'navigator.sendBeacon is forbidden — your data never leaves the browser.',
+    message: 'navigator.sendBeacon is forbidden — your data never leaves the browser.',
   },
   {
     selector:
-      "MemberExpression[object.name=/^(window|globalThis|self)$/][property.name=/^(fetch|XMLHttpRequest|WebSocket|EventSource)$/]",
-    message:
-      'No network in Ledger Mortis — window/globalThis/self network APIs are forbidden.',
+      'MemberExpression[object.name=/^(window|globalThis|self)$/][property.name=/^(fetch|XMLHttpRequest|WebSocket|EventSource)$/]',
+    message: 'No network in Ledger Mortis — window/globalThis/self network APIs are forbidden.',
   },
 ];
 
@@ -86,12 +84,7 @@ export default defineConfig([
 
   // 4b. Node globals for tooling/config and node-environment tests.
   {
-    files: [
-      'vite.config.ts',
-      'vitest.setup.ts',
-      'eslint.config.js',
-      'tests/**/*.ts',
-    ],
+    files: ['vite.config.ts', 'vitest.setup.ts', 'eslint.config.js', 'tests/**/*.ts'],
     languageOptions: {
       globals: { ...globals.node },
     },

@@ -47,10 +47,7 @@ type LintMessage = ESLint.LintResult['messages'][number];
  * Lint a snippet of code against the repo's eslint.config.js using a VIRTUAL
  * file path (nothing is written to disk) and return the messages array.
  */
-async function lintSnippet(
-  code: string,
-  filePath: string,
-): Promise<LintMessage[]> {
+async function lintSnippet(code: string, filePath: string): Promise<LintMessage[]> {
   const results = await eslint.lintText(code, {
     filePath: resolve(repoRoot, filePath),
   });
@@ -79,10 +76,7 @@ function describeMessages(messages: LintMessage[]): string {
  * snippet produced at least one error overall (Req 4.4 — so that
  * `eslint . --max-warnings 0` exits non-zero).
  */
-function expectRuleError(
-  messages: LintMessage[],
-  ruleId: string,
-): LintMessage[] {
+function expectRuleError(messages: LintMessage[], ruleId: string): LintMessage[] {
   const matching = messages.filter((m) => m.ruleId === ruleId);
   expect(
     matching.length,
@@ -101,11 +95,7 @@ function expectRuleError(
  * specific to a single banned name, so dropping that name from the config
  * fails exactly this case.
  */
-function expectRuleErrorNamingToken(
-  messages: LintMessage[],
-  ruleId: string,
-  name: string,
-): void {
+function expectRuleErrorNamingToken(messages: LintMessage[], ruleId: string, name: string): void {
   const matching = expectRuleError(messages, ruleId);
   const token = `'${name}'`;
   const naming = matching.filter((m) => m.message.includes(token));
@@ -114,9 +104,7 @@ function expectRuleErrorNamingToken(
     `expected a '${ruleId}' message mentioning ${token}, got: ${describeMessages(messages)}`,
   ).toBeGreaterThan(0);
   for (const m of naming) {
-    expect(m.severity, `'${ruleId}' message for ${token} must be an error`).toBe(
-      2,
-    );
+    expect(m.severity, `'${ruleId}' message for ${token} must be an error`).toBe(2);
   }
 }
 
@@ -189,20 +177,13 @@ describe('ESLint purity boundary (Node API)', () => {
   // custom message that does not name the member, so these assert only the
   // ruleId + error severity.
   const memberObjects = ['window', 'globalThis', 'self'] as const;
-  const memberProps = [
-    'fetch',
-    'XMLHttpRequest',
-    'WebSocket',
-    'EventSource',
-  ] as const;
+  const memberProps = ['fetch', 'XMLHttpRequest', 'WebSocket', 'EventSource'] as const;
   const memberCases: ReadonlyArray<readonly [string, string]> = [
     ...memberObjects.flatMap((obj) =>
-      memberProps.map(
-        (prop): readonly [string, string] => [
-          `${obj}.${prop}`,
-          `export const a = ${obj}.${prop};`,
-        ],
-      ),
+      memberProps.map((prop): readonly [string, string] => [
+        `${obj}.${prop}`,
+        `export const a = ${obj}.${prop};`,
+      ]),
     ),
     ['navigator.sendBeacon', "export const a = navigator.sendBeacon('x');"],
   ];
@@ -217,28 +198,26 @@ describe('ESLint purity boundary (Node API)', () => {
   );
 
   // --- Case 5: network ban also applies inside src/core (Req 4.3) ---
-  it('bans fetch in src/core too (network ban applies everywhere under src)', async () => {
-    const code = 'export const a = fetch;';
-    const messages = await lintSnippet(code, 'src/core/x.ts');
-    expectRuleError(messages, 'no-restricted-globals');
-  }, LINT_TIMEOUT);
+  it(
+    'bans fetch in src/core too (network ban applies everywhere under src)',
+    async () => {
+      const code = 'export const a = fetch;';
+      const messages = await lintSnippet(code, 'src/core/x.ts');
+      expectRuleError(messages, 'no-restricted-globals');
+    },
+    LINT_TIMEOUT,
+  );
 
   // --- Case 6: negative controls — clean snippets produce zero messages ---
   it.each([
     ['src/core/x.ts', 'export const answer = 42;'],
-    [
-      'src/ui/x.tsx',
-      "import { useState } from 'react'; export const u = useState;",
-    ],
+    ['src/ui/x.tsx', "import { useState } from 'react'; export const u = useState;"],
     ['src/ui/x.tsx', 'export const d = document;'],
   ])(
     'clean snippet %s produces zero messages',
     async (filePath, code) => {
       const messages = await lintSnippet(code, filePath);
-      expect(
-        messages,
-        `expected no messages, got: ${describeMessages(messages)}`,
-      ).toHaveLength(0);
+      expect(messages, `expected no messages, got: ${describeMessages(messages)}`).toHaveLength(0);
     },
     LINT_TIMEOUT,
   );
@@ -246,10 +225,7 @@ describe('ESLint purity boundary (Node API)', () => {
   // --- Case 7: warning-free — clean snippets carry no warnings (severity 1) ---
   it.each([
     ['src/core/x.ts', 'export const answer = 42;'],
-    [
-      'src/ui/x.tsx',
-      "import { useState } from 'react'; export const u = useState;",
-    ],
+    ['src/ui/x.tsx', "import { useState } from 'react'; export const u = useState;"],
     ['src/ui/x.tsx', 'export const d = document;'],
   ])(
     'clean snippet %s has no warnings (--max-warnings 0)',
@@ -282,8 +258,8 @@ describe('ESLint purity boundary (Node API)', () => {
 
 describe('effective config (overlap guard)', () => {
   const hasCalculateConfig =
-    typeof (ESLint.prototype as { calculateConfigForFile?: unknown })
-      .calculateConfigForFile === 'function';
+    typeof (ESLint.prototype as { calculateConfigForFile?: unknown }).calculateConfigForFile ===
+    'function';
 
   const maybeIt = hasCalculateConfig ? it : it.skip;
 
@@ -303,14 +279,10 @@ describe('effective config (overlap guard)', () => {
   maybeIt(
     'no-restricted-globals for src/core carries BOTH network and DOM/storage names',
     async () => {
-      const config = (await eslint.calculateConfigForFile(
-        resolve(repoRoot, 'src/core/x.ts'),
-      )) as {
+      const config = (await eslint.calculateConfigForFile(resolve(repoRoot, 'src/core/x.ts'))) as {
         rules?: Record<string, unknown[]>;
       };
-      const names = restrictedGlobalNames(
-        config.rules?.['no-restricted-globals'] ?? [],
-      );
+      const names = restrictedGlobalNames(config.rules?.['no-restricted-globals'] ?? []);
 
       const expected = [
         // network names
@@ -326,9 +298,7 @@ describe('effective config (overlap guard)', () => {
         'navigator',
       ];
       for (const name of expected) {
-        expect(names, `expected '${name}' in effective core config`).toContain(
-          name,
-        );
+        expect(names, `expected '${name}' in effective core config`).toContain(name);
       }
     },
     LINT_TIMEOUT,
@@ -337,20 +307,14 @@ describe('effective config (overlap guard)', () => {
   maybeIt(
     'no-restricted-globals for src/ui carries all four network names',
     async () => {
-      const config = (await eslint.calculateConfigForFile(
-        resolve(repoRoot, 'src/ui/x.tsx'),
-      )) as {
+      const config = (await eslint.calculateConfigForFile(resolve(repoRoot, 'src/ui/x.tsx'))) as {
         rules?: Record<string, unknown[]>;
       };
-      const names = restrictedGlobalNames(
-        config.rules?.['no-restricted-globals'] ?? [],
-      );
+      const names = restrictedGlobalNames(config.rules?.['no-restricted-globals'] ?? []);
 
       const expected = ['fetch', 'XMLHttpRequest', 'WebSocket', 'EventSource'];
       for (const name of expected) {
-        expect(names, `expected '${name}' in effective ui config`).toContain(
-          name,
-        );
+        expect(names, `expected '${name}' in effective ui config`).toContain(name);
       }
     },
     LINT_TIMEOUT,

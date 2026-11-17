@@ -305,6 +305,18 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1794814216429
       }
+    ],
+    "8. Final verification — run the gates and asset-preservation checks": [
+      {
+        "executionId": "caaa74e2-6990-496b-87a5-0e2c8ca40ef8",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794817273559
+      },
+      {
+        "executionId": "f52b4e7c-db97-459e-b60f-599b4c4715cc",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794950801594
+      }
     ]
   }
 }
