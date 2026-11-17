@@ -1,0 +1,322 @@
+{
+  "pbtResults": {
+    "1.6 Add the placeholder property-based test proving fast-check runs (Property 1)": {
+      "status": "passed",
+      "lastRunTimestamp": 1794174297693
+    }
+  },
+  "executionHistory": {
+    "1.1 Create the base scaffold and `package.json` with scripts and engines": [
+      {
+        "executionId": "6a5434f9-9b72-446f-8d5c-48b32b851ead",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794152078968
+      },
+      {
+        "executionId": "6a5434f9-9b72-446f-8d5c-48b32b851ead",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794152357422
+      }
+    ],
+    "1.2 Configure TypeScript (strict), Vite, and Vitest": [
+      {
+        "executionId": "16665f13-7177-43ee-b3e1-f1a7f7302791",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794160939251
+      },
+      {
+        "executionId": "16665f13-7177-43ee-b3e1-f1a7f7302791",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794161629398
+      }
+    ],
+    "1.3 Install testing, lint, and format dependencies and add the Prettier config": [
+      {
+        "executionId": "23c45330-fedf-41d1-86b7-2d227be688fd",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794164340554
+      },
+      {
+        "executionId": "23c45330-fedf-41d1-86b7-2d227be688fd",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794165661567
+      }
+    ],
+    "1.4 Create `index.html` with language, viewport, title, and no third-party scripts": [
+      {
+        "executionId": "aa4579f7-cccf-4213-b371-6df20512dfc0",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794171015538
+      },
+      {
+        "executionId": "aa4579f7-cccf-4213-b371-6df20512dfc0",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794171152879
+      }
+    ],
+    "1.5 Append-only edit to `.gitignore`": [
+      {
+        "executionId": "adf2aad8-91ea-4625-8441-ca79675fd076",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794172503964
+      },
+      {
+        "executionId": "adf2aad8-91ea-4625-8441-ca79675fd076",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794172553441
+      }
+    ],
+    "1.6 Add the placeholder property-based test proving fast-check runs (Property 1)": [
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174217214
+      },
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174397246
+      }
+    ],
+    "1. Scaffold the Vite + React + TypeScript project and wire the toolchain in the repo root": [
+      {
+        "executionId": "de5c8683-fe43-4701-b90c-e46ce12b4c1a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794174397479
+      }
+    ],
+    "2. Create the canonical folder layout with `.gitkeep` files": [
+      {
+        "executionId": "c3ba2fe9-d787-4d92-81ce-798c435c8eaa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794179318092
+      },
+      {
+        "executionId": "c3ba2fe9-d787-4d92-81ce-798c435c8eaa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794179480883
+      }
+    ],
+    "3.1 Write the ESLint flat config enforcing the purity and network bans": [
+      {
+        "executionId": "d948c080-e017-426a-937a-c35ab4662bf6",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794180587960
+      },
+      {
+        "executionId": "d948c080-e017-426a-937a-c35ab4662bf6",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794181233305
+      }
+    ],
+    "3.2 Write the permanent node-environment test driving ESLint via its Node API": [
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216039846
+      },
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216723742
+      },
+      {
+        "executionId": "89042b83-fa4e-4355-8d64-762a8ff8a1df",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794219578446
+      },
+      {
+        "executionId": "89042b83-fa4e-4355-8d64-762a8ff8a1df",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794220392280
+      }
+    ],
+    "3. Enforce the purity boundary with ESLint and prove it with a permanent test": [
+      {
+        "executionId": "8801a3d5-1c9a-4a7d-b3e3-9e1cbfae279b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794216723961
+      }
+    ],
+    "4.1 Implement `src/ui/a11y/contrast.ts` (pure TypeScript)": [
+      {
+        "executionId": "cca92653-30a1-4040-ae1f-1f6607f35b21",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794261846988
+      },
+      {
+        "executionId": "cca92653-30a1-4040-ae1f-1f6607f35b21",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794262095742
+      }
+    ],
+    "4.2 Write the contrast property-based test (Property 3)": [
+      {
+        "executionId": "0d6c5c89-4575-46ae-873f-7b8bd18c8f4b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794263099829
+      },
+      {
+        "executionId": "0d6c5c89-4575-46ae-873f-7b8bd18c8f4b",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794263245383
+      },
+      {
+        "executionId": "480fef87-8019-4410-b54e-6d0f78402f43",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794266555743
+      },
+      {
+        "executionId": "480fef87-8019-4410-b54e-6d0f78402f43",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794266741013
+      }
+    ],
+    "4.3 Write the contrast table-driven example tests (Properties 4 and 5)": [
+      {
+        "executionId": "d0ced232-3b09-480e-a702-981bd6256ca3",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794338832179
+      },
+      {
+        "executionId": "d0ced232-3b09-480e-a702-981bd6256ca3",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794339012021
+      }
+    ],
+    "4. Implement the pure WCAG contrast function and its tests": [
+      {
+        "executionId": "d0ced232-3b09-480e-a702-981bd6256ca3",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794339012363
+      }
+    ],
+    "5.1 Implement `src/ui/theme.ts`": [
+      {
+        "executionId": "0553acad-74c5-47b0-8c09-962d7fded6aa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794346587492
+      },
+      {
+        "executionId": "0553acad-74c5-47b0-8c09-962d7fded6aa",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794346694320
+      }
+    ],
+    "5.2 Write the theme table-driven example test (Property 2)": [
+      {
+        "executionId": "36cb1f81-6a65-458b-9b30-1acb048b2dba",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794661189144
+      },
+      {
+        "executionId": "36cb1f81-6a65-458b-9b30-1acb048b2dba",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794661487337
+      }
+    ],
+    "5. Implement the pure theme reducer and its test": [
+      {
+        "executionId": "36cb1f81-6a65-458b-9b30-1acb048b2dba",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794661487584
+      }
+    ],
+    "6.1 Author `src/styles/tokens.css` design tokens and theme/motion blocks": [
+      {
+        "executionId": "44c6a085-41ee-4547-bd5e-cbb8ae9a1780",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794662519003
+      },
+      {
+        "executionId": "0a169718-1530-47e7-9eee-ebb9208b0217",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794663197943
+      }
+    ],
+    "6.2 Implement `src/ui/LandingScreen.tsx`, `src/App.tsx`, and `src/main.tsx`": [
+      {
+        "executionId": "c49f4e4b-8cc4-40ed-87c4-c0b164d45876",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794663565213
+      },
+      {
+        "executionId": "c49f4e4b-8cc4-40ed-87c4-c0b164d45876",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794663846204
+      }
+    ],
+    "6.3 Write the React Testing Library component test": [
+      {
+        "executionId": "420653a6-1f36-4864-b631-2eee4a0e8b7f",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794764919788
+      },
+      {
+        "executionId": "420653a6-1f36-4864-b631-2eee4a0e8b7f",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794765391186
+      }
+    ],
+    "6. Build the token stylesheet, landing screen, and app entry, with the component test": [
+      {
+        "executionId": "420653a6-1f36-4864-b631-2eee4a0e8b7f",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794765391422
+      }
+    ],
+    "7.1 Write the README skeleton": [
+      {
+        "executionId": "0e801ce5-f426-4f49-85b4-f9965d3b0151",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794770014449
+      },
+      {
+        "executionId": "0e801ce5-f426-4f49-85b4-f9965d3b0151",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794770240496
+      },
+      {
+        "executionId": "6abf43df-a29c-4ebe-8bfa-22953f6b4a0d",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794771075109
+      },
+      {
+        "executionId": "6abf43df-a29c-4ebe-8bfa-22953f6b4a0d",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794771179340
+      }
+    ],
+    "7.2 Write the repo-conformance test that reads files from disk": [
+      {
+        "executionId": "e83c3c83-3d42-4630-8900-969ffebdf352",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794813903467
+      },
+      {
+        "executionId": "e83c3c83-3d42-4630-8900-969ffebdf352",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794814216231
+      }
+    ],
+    "7. Write the README skeleton and the repo-conformance test": [
+      {
+        "executionId": "e83c3c83-3d42-4630-8900-969ffebdf352",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794814216429
+      }
+    ],
+    "8. Final verification — run the gates and asset-preservation checks": [
+      {
+        "executionId": "caaa74e2-6990-496b-87a5-0e2c8ca40ef8",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794817273559
+      },
+      {
+        "executionId": "f52b4e7c-db97-459e-b60f-599b4c4715cc",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1794950801594
+      }
+    ]
+  }
+}

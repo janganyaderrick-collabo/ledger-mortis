@@ -1,0 +1,6 @@
+node_modules
+dist
+coverage
+.kiro
+package-lock.json
+LICENSE
