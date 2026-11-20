@@ -8,8 +8,10 @@ Module number and the spec folder under .kiro/specs it implements:
 
 ## Done-when checklist
 
+Tick each item, or write N/A and a short reason. Leave nothing blank.
+
 - [ ] npm run lint passes with zero warnings
-- [ ] npm test passes (state the count: )
+- [ ] npm test passes. Tests passing:
 - [ ] npx tsc -b and npm run build pass
 - [ ] npx prettier --check . passes
 - [ ] The folder layout, .gitignore and LICENSE checks pass (.kiro is never ignored)
