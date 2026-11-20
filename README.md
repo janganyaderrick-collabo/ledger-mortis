@@ -65,6 +65,9 @@ src/
 tests/
   eslint-purity.test.ts        tests that enforce the lint boundaries
   repo-conformance.test.ts     tests that check the repository against the spec
+.github/
+  workflows/ci.yml             runs the checks on every push to main and every pull request
+  pull_request_template.md     checklist every module pull request fills in
 .kiro/
   steering/                    project rules (tech, product, privacy, design language)
   specs/                       module specs
