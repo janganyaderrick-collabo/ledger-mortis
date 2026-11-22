@@ -7,7 +7,7 @@ These rules apply to everything that turns user text into data. Requirements, de
 - Amounts are integer minor units, signed: negative is money out, positive is money in. The currency is an uppercase three-letter code.
 - No floating-point numbers anywhere in src/core. Decimal text is parsed digit by digit, never with parseFloat or Number on a decimal string.
 - Minor-unit exponent: 0 for JPY, KRW, UGX and RWF; 2 for every other currency.
-- An amount that is not a safe integer is an import issue, never a crash.
+- An amount that is not a safe integer, or whose absolute value exceeds 100,000,000,000 minor units, is an import issue, never a crash.
 
 ## Dates
 
@@ -23,7 +23,7 @@ These rules apply to everything that turns user text into data. Requirements, de
 
 ## Privacy
 
-- Any run of 7 or more digits in free text (descriptions, counterparties, issue excerpts) is replaced with "[number]". Phone numbers and account numbers are never stored.
+- Any group of 7 or more digits in free text (descriptions, counterparties, issue excerpts) is replaced with "[number]". Digits separated only by single spaces or hyphens count as one group. Phone numbers and account numbers are never stored.
 - src/core uses no network, no storage, no randomness and no clock. The same input always gives the same output, including transaction ids.
 - Sample data is fictional. No real names, numbers or third-party brand names appear in samples, UI text or the demo.
 
