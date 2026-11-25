@@ -1,0 +1,17 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "core-tests-on-save",
+      "trigger": "PostFileSave",
+      "action": {
+        "type": "command",
+        "command": "npx vitest run src/core src/samples --passWithNoTests"
+      },
+      "description": "Runs the core and sample tests whenever a TypeScript file in src/core or src/samples is saved.",
+      "matcher": "src[\\\\/](core|samples)[\\\\/].*\\.ts$",
+      "timeout": 60,
+      "enabled": true
+    }
+  ]
+}
