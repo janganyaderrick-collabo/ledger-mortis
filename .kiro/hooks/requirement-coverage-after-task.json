@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "requirement-coverage-after-task",
+      "trigger": "PostTaskExec",
+      "action": {
+        "type": "agent",
+        "prompt": "A spec task just finished. Open .kiro/specs/01-parsers/tasks.md, find the task that was most recently marked complete, and read its _Requirements: line. For every acceptance criterion that line names (a whole requirement number such as 5 means all of its criteria, 5.1, 5.2 and so on), search every *.test.ts file under src/ and tests/ for the text \"Req N.M\" and report, in at most 12 lines: (1) the task id; (2) the criteria that are covered; (3) the criteria that are NOT covered; (4) any \"Req N.M\" mentioned in a test that does not exist in .kiro/specs/01-parsers/requirements.md. Do not edit any file, do not run any command and do not start another task."
+      },
+      "description": "After each spec task, checks that the criteria it claims to cover are named in a test (Req 22).",
+      "enabled": true
+    }
+  ]
+}
