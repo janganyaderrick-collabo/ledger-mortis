@@ -73,7 +73,7 @@ function describeMessages(messages: LintMessage[]): string {
 /**
  * Return the messages carrying `ruleId`, asserting at least one exists and
  * that each such message is an error (severity === 2). Also asserts the
- * snippet produced at least one error overall (Req 4.4 — so that
+ * snippet produced at least one error overall (M0 R4.4 — so that
  * `eslint . --max-warnings 0` exits non-zero).
  */
 function expectRuleError(messages: LintMessage[], ruleId: string): LintMessage[] {
@@ -109,14 +109,14 @@ function expectRuleErrorNamingToken(messages: LintMessage[], ruleId: string, nam
 }
 
 describe('ESLint purity boundary (Node API)', () => {
-  // --- Network globals in src/ui — one case per name (Req 4.3) ---
+  // --- Network globals in src/ui — one case per name (M0 R4.3) ---
   it.each([
     ['fetch', "export const a = fetch('x');"],
     ['XMLHttpRequest', 'export const a = new XMLHttpRequest();'],
     ['WebSocket', "export const a = new WebSocket('x');"],
     ['EventSource', "export const a = new EventSource('x');"],
   ])(
-    'bans network global %s in src/ui via no-restricted-globals (Req 4.3)',
+    'bans network global %s in src/ui via no-restricted-globals (M0 R4.3)',
     async (name, code) => {
       const messages = await lintSnippet(code, 'src/ui/x.tsx');
       expectRuleErrorNamingToken(messages, 'no-restricted-globals', name);
@@ -124,14 +124,14 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- Same four network globals in src/core — one case per name (Req 4.3) ---
+  // --- Same four network globals in src/core — one case per name (M0 R4.3) ---
   it.each([
     ['fetch', "export const a = fetch('x');"],
     ['XMLHttpRequest', 'export const a = new XMLHttpRequest();'],
     ['WebSocket', "export const a = new WebSocket('x');"],
     ['EventSource', "export const a = new EventSource('x');"],
   ])(
-    'bans network global %s in src/core via no-restricted-globals (Req 4.3)',
+    'bans network global %s in src/core via no-restricted-globals (M0 R4.3)',
     async (name, code) => {
       const messages = await lintSnippet(code, 'src/core/x.ts');
       expectRuleErrorNamingToken(messages, 'no-restricted-globals', name);
@@ -139,7 +139,7 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- DOM / storage globals in src/core — one case per name (Req 4.2) ---
+  // --- DOM / storage globals in src/core — one case per name (M0 R4.2) ---
   it.each([
     ['window', 'export const a = window;'],
     ['document', 'export const a = document;'],
@@ -147,7 +147,7 @@ describe('ESLint purity boundary (Node API)', () => {
     ['sessionStorage', 'export const a = sessionStorage;'],
     ['navigator', 'export const a = navigator;'],
   ])(
-    'bans DOM/storage global %s in src/core via no-restricted-globals (Req 4.2)',
+    'bans DOM/storage global %s in src/core via no-restricted-globals (M0 R4.2)',
     async (name, code) => {
       const messages = await lintSnippet(code, 'src/core/x.ts');
       expectRuleErrorNamingToken(messages, 'no-restricted-globals', name);
@@ -155,7 +155,7 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- React imports in src/core — one case per name (Req 4.1) ---
+  // --- React imports in src/core — one case per name (M0 R4.1) ---
   // The last two exercise the react/* and react-dom/* pattern bans.
   it.each([
     ['react', "import React from 'react';"],
@@ -163,7 +163,7 @@ describe('ESLint purity boundary (Node API)', () => {
     ['react/jsx-runtime', "import x from 'react/jsx-runtime';"],
     ['react-dom/client', "import x from 'react-dom/client';"],
   ])(
-    'bans import %s in src/core via no-restricted-imports (Req 4.1)',
+    'bans import %s in src/core via no-restricted-imports (M0 R4.1)',
     async (name, code) => {
       const messages = await lintSnippet(code, 'src/core/x.ts');
       expectRuleErrorNamingToken(messages, 'no-restricted-imports', name);
@@ -171,7 +171,7 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- Member-expression network forms in src/ui (Req 4.3) ---
+  // --- Member-expression network forms in src/ui (M0 R4.3) ---
   // One case per (object × property) of the window/globalThis/self network
   // selector, plus navigator.sendBeacon. no-restricted-syntax uses a fully
   // custom message that does not name the member, so these assert only the
@@ -189,7 +189,7 @@ describe('ESLint purity boundary (Node API)', () => {
   ];
 
   it.each(memberCases)(
-    'bans member form %s in src/ui via no-restricted-syntax (Req 4.3)',
+    'bans member form %s in src/ui via no-restricted-syntax (M0 R4.3)',
     async (_label, code) => {
       const messages = await lintSnippet(code, 'src/ui/x.tsx');
       expectRuleError(messages, 'no-restricted-syntax');
@@ -197,7 +197,7 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- Case 5: network ban also applies inside src/core (Req 4.3) ---
+  // --- Case 5: network ban also applies inside src/core (M0 R4.3) ---
   it(
     'bans fetch in src/core too (network ban applies everywhere under src)',
     async () => {
@@ -236,14 +236,14 @@ describe('ESLint purity boundary (Node API)', () => {
     LINT_TIMEOUT,
   );
 
-  // --- Case 8: Req 4.4 — violating snippets yield errorCount > 0 so lint exits non-zero ---
+  // --- Case 8: M0 R4.4 — violating snippets yield errorCount > 0 so lint exits non-zero ---
   it.each([
     ['src/core/x.ts', "import React from 'react';"],
     ['src/core/x.ts', 'export const a = document;'],
     ['src/ui/x.tsx', 'export const a = fetch;'],
     ['src/ui/x.tsx', "export const a = window.fetch('x');"],
   ])(
-    'violating snippet %s produces errorCount > 0 (Req 4.4)',
+    'violating snippet %s produces errorCount > 0 (M0 R4.4)',
     async (filePath, code) => {
       const results = await eslint.lintText(code, {
         filePath: resolve(repoRoot, filePath),
@@ -251,6 +251,92 @@ describe('ESLint purity boundary (Node API)', () => {
       const result = results[0];
       expect(result).toBeDefined();
       expect(result?.errorCount ?? 0).toBeGreaterThan(0);
+    },
+    LINT_TIMEOUT,
+  );
+});
+
+// Feature: 01-parsers, Task 1: purity lint for randomness, the clock and float parsing in src/core.
+// Real message formats (verified against live lintText output):
+//   * no-restricted-properties: "'Math.random' is restricted from being used. <custom>"
+//   * no-restricted-globals:    "Unexpected use of 'Date'. <custom>"
+describe('ESLint purity: randomness, clock and float parsing in src/core', () => {
+  it.each([
+    ['Req 18.1, 18.7, 18.8: bans Math.random', 'Math.random', 'no-restricted-properties'],
+    [
+      'Req 18.2, 18.7, 18.8: bans Number.parseFloat',
+      'Number.parseFloat',
+      'no-restricted-properties',
+    ],
+    ['Req 18.3, 18.7, 18.8: bans global Date', 'Date', 'no-restricted-globals'],
+    ['Req 18.3, 18.7, 18.8: bans global crypto', 'crypto', 'no-restricted-globals'],
+    ['Req 18.3, 18.7, 18.8: bans global performance', 'performance', 'no-restricted-globals'],
+    ['Req 18.3, 18.7, 18.8: bans global parseFloat', 'parseFloat', 'no-restricted-globals'],
+  ])(
+    '%s in src/core',
+    async (_title, name, ruleId) => {
+      const messages = await lintSnippet(`export const a = ${name};`, 'src/core/x.ts');
+      expectRuleErrorNamingToken(messages, ruleId, name);
+    },
+    LINT_TIMEOUT,
+  );
+
+  it(
+    'Req 18.9, 18.6: forbidden names are not exempt in a src/core test file',
+    async () => {
+      const messages = await lintSnippet('export const a = Math.random();', 'src/core/x.test.ts');
+      expectRuleErrorNamingToken(messages, 'no-restricted-properties', 'Math.random');
+    },
+    LINT_TIMEOUT,
+  );
+
+  it(
+    'Req 18.10: Math.imul and Number.isSafeInteger produce zero messages',
+    async () => {
+      const code = 'export const a = Math.imul(1, 2); export const b = Number.isSafeInteger(3);';
+      const messages = await lintSnippet(code, 'src/core/x.ts');
+      expect(messages, `expected no messages, got: ${describeMessages(messages)}`).toHaveLength(0);
+    },
+    LINT_TIMEOUT,
+  );
+
+  it(
+    'Req 18.4, 18.11: effective src/core config lists thirteen globals and both restricted properties',
+    async () => {
+      const config = (await eslint.calculateConfigForFile(resolve(repoRoot, 'src/core/x.ts'))) as {
+        rules?: Record<string, unknown[]>;
+      };
+      const globalOptions = (config.rules?.['no-restricted-globals'] ?? []).slice(1);
+      const globalNames = globalOptions.map((opt) =>
+        typeof opt === 'string' ? opt : (opt as { name: string }).name,
+      );
+      const expectedGlobals = [
+        'fetch',
+        'XMLHttpRequest',
+        'WebSocket',
+        'EventSource',
+        'window',
+        'document',
+        'localStorage',
+        'sessionStorage',
+        'navigator',
+        'Date',
+        'crypto',
+        'performance',
+        'parseFloat',
+      ];
+      expect(expectedGlobals).toHaveLength(13);
+      for (const name of expectedGlobals) {
+        expect(globalNames, `expected '${name}' in effective core globals`).toContain(name);
+      }
+
+      const propertyOptions = (config.rules?.['no-restricted-properties'] ?? []).slice(1) as {
+        object: string;
+        property: string;
+      }[];
+      const members = propertyOptions.map((opt) => `${opt.object}.${opt.property}`);
+      expect(members).toContain('Math.random');
+      expect(members).toContain('Number.parseFloat');
     },
     LINT_TIMEOUT,
   );

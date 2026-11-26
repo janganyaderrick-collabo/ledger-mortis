@@ -1,0 +1,17 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Lint enforcement of purity (eslint.config.js and tests/eslint-purity.test.ts)": [
+      {
+        "executionId": "ff45b7d9-2455-435e-9921-659256b6741a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795656143115
+      },
+      {
+        "executionId": "ff45b7d9-2455-435e-9921-659256b6741a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795656489616
+      }
+    ]
+  }
+}

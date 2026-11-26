@@ -6,7 +6,7 @@ This plan builds Module 1 in dependency order. It starts with the lint rules tha
 
 ## Tasks
 
-- [ ] 1. Lint enforcement of purity (eslint.config.js and tests/eslint-purity.test.ts)
+- [x] 1. Lint enforcement of purity (eslint.config.js and tests/eslint-purity.test.ts)
   - Edit only `eslint.config.js` and `tests/eslint-purity.test.ts`. Keep every existing rule, block and test case unchanged.
   - In `eslint.config.js`, add a new block scoped to `files: ['src/core/**/*.{ts,tsx}']` that sets `no-restricted-properties` to `['error', { object: 'Math', property: 'random', message }, { object: 'Number', property: 'parseFloat', message }]`.
   - In the existing `src/core` block, restate the full `no-restricted-globals` list with 13 names: `fetch`, `XMLHttpRequest`, `WebSocket`, `EventSource` (from `networkGlobals`), `window`, `document`, `localStorage`, `sessionStorage`, `navigator`, and the four new names `Date`, `crypto`, `performance`, `parseFloat`. A later block replaces an earlier value of the same rule, so the whole list must be restated.

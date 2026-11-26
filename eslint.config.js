@@ -138,6 +138,31 @@ export default defineConfig([
           message: 'src/core must not touch browser storage.',
         },
         { name: 'navigator', message: 'src/core must not touch the DOM.' },
+        { name: 'Date', message: 'src/core must not read the clock — Date is forbidden.' },
+        { name: 'crypto', message: 'src/core must not use crypto for ids or randomness.' },
+        { name: 'performance', message: 'src/core must not read the clock.' },
+        { name: 'parseFloat', message: 'src/core must not parse decimal text with parseFloat.' },
+      ],
+    },
+  },
+
+  // 6b. Purity: no randomness and no float parsing in src/core (Req 18.1, 18.2).
+  //     Applies to test files under src/core too; they are not exempt (Req 18.6).
+  {
+    files: ['src/core/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-properties': [
+        'error',
+        {
+          object: 'Math',
+          property: 'random',
+          message: 'src/core must not use randomness — Math.random is forbidden.',
+        },
+        {
+          object: 'Number',
+          property: 'parseFloat',
+          message: 'src/core must not parse decimal text with Number.parseFloat.',
+        },
       ],
     },
   },
