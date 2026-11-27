@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 9adaea1. Tests passing: 398.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 2ff42b2. Tests passing: 398.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -14,7 +14,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- Kiro credits: 313 of 4000 used on 26 Nov. The chat allowance is the limited resource, so keep replies and pastes short.
 
-\- Next action: run task 3 of Module 1 with the standard prompt below (after the owner approves).
+\- Next action: run task 4 of Module 1 with the standard prompt below (after the owner approves).
 
 \## Product idea
 
