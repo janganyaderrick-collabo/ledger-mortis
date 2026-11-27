@@ -40,7 +40,7 @@ This plan builds Module 1 in dependency order. It starts with the lint rules tha
   - Tag each test with Req N.M.
   - _Requirements: 1, 2, 3, 20.1, 20.2, 20.3, 20.12, 20.13, 22.2, 22.3, 23.5_
 
-- [ ] 4. calendar.ts with calendar.testkit.ts, calendar.test.ts and the P1 date and time properties
+- [x] 4. calendar.ts with calendar.testkit.ts, calendar.test.ts and the P1 date and time properties
   - Create `src/core/model/calendar.ts` with `isLeapYear`, `isValidCalendarDate`, `parseIsoDate`, `parseSlashDate`, `parseDate`, `parseTime24`, `parseTime12` and `parseTime`, following Algorithm B. Use no `Date`, no time zones and no regular expressions; all results are `ParseOutcome` values with reason "invalid".
   - Create `src/core/model/calendar.testkit.ts`: the independent month-length and leap-year reference table (plain data, not derived from `Date`), generators for valid and malformed date and time texts.
   - Create `src/core/model/calendar.test.ts` (examples): leap years 1900 (no), 2000 (yes), 2024 (yes), 2100 (no); 29 February cases; year 0000 and 0001; "dmy" versus "mdy" on `5/11/26`; 2-digit and 4-digit years; the 12 AM, 12 PM, 1 PM and 11 PM conversions; separators, month names and layouts that must fail; two spaces before AM. Cover every criterion of Requirement 4, including Req 4.9 and Req 4.15 (the source has no `Date`, checked by lint).

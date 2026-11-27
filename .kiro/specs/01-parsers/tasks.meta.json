@@ -31,6 +31,13 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1795809964810
       }
+    ],
+    "4. calendar.ts with calendar.testkit.ts, calendar.test.ts and the P1 date and time properties": [
+      {
+        "executionId": "6ad65e41-3695-41a6-8ca6-906b8ecd0e14",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795817837116
+      }
     ]
   }
 }
