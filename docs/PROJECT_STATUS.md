@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 9adaea1. Tests passing: 160.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 9adaea1. Tests passing: 398.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -56,7 +56,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- \[x] 2. Model foundation: types, issues, chars
 
-\- \[ ] 3. money.ts and P1 properties. Mutation check on the Amount\_Grammar (bring it to Claude)
+\- \[x] 3. money.ts and P1 properties. Mutation check on the Amount\_Grammar (bring it to Claude)
 
 \- \[ ] 4. calendar.ts and P1 properties
 
@@ -157,6 +157,8 @@ After Kiro finishes: click Accept, run powershell -ExecutionPolicy Bypass -File 
 \- The "unrequested changes" line in every agent report caught problems early: a requirements revision that never saved, and a Req-number collision found by the coverage hook.
 
 \- The coverage hook found that old purity tests used tags that clashed with new requirement numbers.
+
+\- Mutation check on the Amount\_Grammar (task 3): 5 mutants, 3 caught, 2 survived as equivalent mutants. One accepted a point for a zero-exponent currency (that guard is redundant with the decimal-count check). One kept adding digits after the too-large flag was set (the flag is never reset, so the result is the same). No test gap.
 
 \## Resume in a new chat
 
