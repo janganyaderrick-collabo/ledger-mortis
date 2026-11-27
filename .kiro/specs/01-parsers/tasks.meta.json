@@ -12,6 +12,18 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1795656489616
       }
+    ],
+    "2. Model foundation: types.ts, issues.ts and chars.ts with their example tests (src/core/model)": [
+      {
+        "executionId": "0bd2d778-22cc-4fbd-878d-eaece4076683",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795789963109
+      },
+      {
+        "executionId": "0bd2d778-22cc-4fbd-878d-eaece4076683",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795790576200
+      }
     ]
   }
 }

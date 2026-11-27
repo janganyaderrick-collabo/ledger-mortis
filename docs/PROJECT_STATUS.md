@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 947b153. Tests passing: 141.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 947b153. Tests passing: 160.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -52,7 +52,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- \[x] 1. Lint enforcement
 
-\- \[ ] 2. Model foundation: types, issues, chars
+\- \[x] 2. Model foundation: types, issues, chars
 
 \- \[ ] 3. money.ts and P1 properties. Mutation check on the Amount\_Grammar (bring it to Claude)
 

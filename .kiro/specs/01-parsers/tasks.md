@@ -18,7 +18,7 @@ This plan builds Module 1 in dependency order. It starts with the lint rules tha
   - After the edit, `npm run lint` and `npm test` must still pass for the existing files.
   - _Requirements: 18.1, 18.2, 18.3, 18.4, 18.5, 18.6, 18.7, 18.8, 18.9, 18.10, 18.11, 18.12, 18.13, 19.7, 22.4_
 
-- [ ] 2. Model foundation: types.ts, issues.ts and chars.ts with their example tests (src/core/model)
+- [x] 2. Model foundation: types.ts, issues.ts and chars.ts with their example tests (src/core/model)
   - Create `src/core/model/types.ts` with the types of the design's Interfaces section: `Currency`, `Money`, `Source`, `Transaction`, `Issue`, `FormatId`, `ImportResult`, `DateOrder`, `ImportOptions`, `AmountFailureReason`, `ParseOutcome<T>`. Add one constant `FORMAT_LABELS` with the labels "CSV" for "csv" and "Mobile-money SMS" for "mobile-money-sms" (Req 7.7). The design names no home for the labels; keep them in `types.ts`.
   - Create `src/core/model/issues.ts` with the `ISSUES` constant: 14 literal strings and the function `wrongNumberOfFields(expected, found)`, giving exactly the 15 messages of Req 7.9.
   - Create `src/core/model/chars.ts` with `isAsciiDigit`, `isAsciiLetter`, `isAsciiUpperOrDigit`, `isWhitespaceCode`, `asciiLowerCode` and `startsWithKeywordAt`. Named exports, module-internal, no regular expressions. `isWhitespaceCode` covers exactly the set that `String.prototype.trim` removes.
