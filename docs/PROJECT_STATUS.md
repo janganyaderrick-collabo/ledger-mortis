@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 947b153. Tests passing: 160.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 9adaea1. Tests passing: 160.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -14,7 +14,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- Kiro credits: 313 of 4000 used on 26 Nov. The chat allowance is the limited resource, so keep replies and pastes short.
 
-\- Next action: run task 2 of Module 1 with the standard prompt below.
+\- Next action: run task 3 of Module 1 with the standard prompt below (after the owner approves).
 
 \## Product idea
 
@@ -47,6 +47,8 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 \- \[x] Module 1 steering (parsing.md), requirements, design and task list approved. Two Kiro hooks created.
 
 \- \[x] Module 1 task 1: lint enforcement.
+
+\- \[x] Module 1 task 2: model types, issues and char helpers.
 
 \## Module 1 tasks (.kiro/specs/01-parsers/tasks.md)
 
