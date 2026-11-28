@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 7935c97. Tests passing: 638.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 7935c97. Tests passing: 664.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -68,7 +68,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- \[x] 8. sms-parser.ts. Mutation check on the SMS parser (bring it to Claude)
 
-\- \[ ] 9. detect.ts, import-text.ts, barrel index.ts
+\- \[x] 9. detect.ts, import-text.ts, barrel index.ts
 
 \- \[ ] 10. src/samples (fictional CSV and SMS samples)
 
