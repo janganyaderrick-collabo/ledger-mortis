@@ -59,6 +59,13 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1795833078257
       }
+    ],
+    "8. sms-parser.ts with sms-parser.testkit.ts, the six example messages and the P1 SMS properties": [
+      {
+        "executionId": "d2ce8353-7e58-44c1-abef-4b8be6c5019a",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795835452267
+      }
     ]
   }
 }
