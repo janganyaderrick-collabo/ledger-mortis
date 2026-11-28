@@ -106,3 +106,14 @@ export const csvTableArb: fc.Arbitrary<CsvTable> = delimiterArb.chain((delimiter
     trailingBreak: fc.boolean(),
   }),
 );
+
+// Line-break and blank-line mixes placed between records (added for the parser tests):
+// plain LF or CRLF, or the same followed by blank lines that may hold only whitespace.
+export const recordSeparatorArb: fc.Arbitrary<string> = fc.constantFrom(
+  '\n',
+  '\r\n',
+  '\n\n',
+  '\r\n\r\n',
+  '\n   \n',
+  '\r\n \u00a0\r\n',
+);

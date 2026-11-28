@@ -162,6 +162,8 @@ After Kiro finishes: click Accept, run powershell -ExecutionPolicy Bypass -File 
 
 \- Hash test (task 5): the known hash f586f212 was computed once with node and pinned in a test. The independent TextEncoder reference implementation in ids.testkit.ts is what really guards the hash.
 
+\- Mutation check on the CSV tokenizer (task 6): all three mutants were caught, including the one in the delimiter match. A good example for the property-based testing section.
+
 \## Resume in a new chat
 
 Send the raw link to this file and the word continue. Link while on the module branch:

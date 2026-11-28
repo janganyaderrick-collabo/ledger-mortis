@@ -52,6 +52,13 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1795830062450
       }
+    ],
+    "7. csv-parser.ts with example tests and the P1 CSV properties": [
+      {
+        "executionId": "31b9105c-cf32-49a6-af65-8e9131e33086",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795833078257
+      }
     ]
   }
 }
