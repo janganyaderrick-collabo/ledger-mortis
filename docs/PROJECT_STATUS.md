@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: ffb30df. Tests passing: 469.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 7935c97. Tests passing: 638.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -62,11 +62,11 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- \[x] 5. masking.ts and ids.ts
 
-\- \[ ] 6. csv-reader.ts. Mutation check on the CSV tokenizer (bring it to Claude)
+\- \[x] 6. csv-reader.ts. Mutation check on the CSV tokenizer (bring it to Claude)
 
-\- \[ ] 7. csv-parser.ts
+\- \[x] 7. csv-parser.ts
 
-\- \[ ] 8. sms-parser.ts. Mutation check on the SMS parser (bring it to Claude)
+\- \[x] 8. sms-parser.ts. Mutation check on the SMS parser (bring it to Claude)
 
 \- \[ ] 9. detect.ts, import-text.ts, barrel index.ts
 
@@ -148,6 +148,8 @@ After Kiro finishes: click Accept, run powershell -ExecutionPolicy Bypass -File 
 
 \- \[ ] Each pull request fills in the PR template.
 
+\- \[ ] SMS cost with 3 or more decimals (task 8): "Transaction cost, Ksh5.123." gives a cost of 512 and the leftover digit is ignored. The design does not say what should happen, and no test covers it. Decide whether it should be an "Invalid transaction cost" issue.
+
 \## Notes for the Kiro write-up
 
 \- Used: steering documents, specs (requirements, design, tasks) for two modules, property-based tests, two hooks (a command hook and an agent hook), CI, spec versus plain chat (the CI change was a plain-chat task).
@@ -161,8 +163,6 @@ After Kiro finishes: click Accept, run powershell -ExecutionPolicy Bypass -File 
 \- Mutation check on the Amount\_Grammar (task 3): 5 mutants, 3 caught, 2 survived as equivalent mutants. One accepted a point for a zero-exponent currency (that guard is redundant with the decimal-count check). One kept adding digits after the too-large flag was set (the flag is never reset, so the result is the same). No test gap.
 
 \- Hash test (task 5): the known hash f586f212 was computed once with node and pinned in a test. The independent TextEncoder reference implementation in ids.testkit.ts is what really guards the hash.
-
-\- Mutation check on the CSV tokenizer (task 6): all three mutants were caught, including the one in the delimiter match. A good example for the property-based testing section.
 
 \## Resume in a new chat
 
