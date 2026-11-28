@@ -53,7 +53,7 @@ This plan builds Module 1 in dependency order. It starts with the lint rules tha
   - Tag each test with Req N.M.
   - _Requirements: 4, 20.1, 20.4, 20.13_
 
-- [ ] 5. masking.ts and ids.ts with their testkits, example tests and P1 properties
+- [x] 5. masking.ts and ids.ts with their testkits, example tests and P1 properties
   - Create `src/core/model/masking.ts` with `MASK_TOKEN`, `maskText` and `buildExcerpt` (Algorithm C): one scan, single space or single hyphen joins digit runs, 7 or more digits become "[number]", mask first and then cut to 60 UTF-16 code units, one unit earlier when a surrogate pair would be split.
   - Create `src/core/model/ids.ts` with `fnv1a32Hex`, `buildHashInput` and `assignTransactionIds` (Algorithm D): hand-written UTF-8 encoder with U+FFFD for a lone surrogate, `Math.imul` and `>>> 0`, hex digits built from nibbles, ids "tx-" plus 8 hex digits, then "-n" from the second occurrence. The caller passes `String(minor)`, never `formatMoney`.
   - Create `src/core/model/masking.testkit.ts` (digit runs of controlled length joined by single spaces, single hyphens or non-joining separators) and `src/core/model/ids.testkit.ts` (an independent reference FNV-1a written with `TextEncoder`, a Hash_Input field-set generator). No forbidden names.

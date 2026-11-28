@@ -38,6 +38,13 @@
         "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
         "timestamp": 1795817837116
       }
+    ],
+    "5. masking.ts and ids.ts with their testkits, example tests and P1 properties": [
+      {
+        "executionId": "f4676dbf-3e7b-410d-825a-a171847698be",
+        "chatSessionId": "sess_49cb06d7-1b13-456c-9831-bbb4ce5f9f43",
+        "timestamp": 1795821491482
+      }
     ]
   }
 }

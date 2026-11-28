@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: 2ff42b2. Tests passing: 429.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: ffb30df. Tests passing: 429.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
