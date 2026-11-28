@@ -4,7 +4,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \## Snapshot
 
-\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: ffb30df. Tests passing: 429.
+\- Updated: 27 Nov 2026. Branch: module/1-parsers. Last commit: ffb30df. Tests passing: 469.
 
 \- Goal: Kiroween 2026 hackathon, Costume Contest category.
 
@@ -60,7 +60,7 @@ Living document. After each commit, tick the box by hand and update the Snapshot
 
 \- \[x] 4. calendar.ts and P1 properties
 
-\- \[ ] 5. masking.ts and ids.ts
+\- \[x] 5. masking.ts and ids.ts
 
 \- \[ ] 6. csv-reader.ts. Mutation check on the CSV tokenizer (bring it to Claude)
 
@@ -159,6 +159,8 @@ After Kiro finishes: click Accept, run powershell -ExecutionPolicy Bypass -File 
 \- The coverage hook found that old purity tests used tags that clashed with new requirement numbers.
 
 \- Mutation check on the Amount\_Grammar (task 3): 5 mutants, 3 caught, 2 survived as equivalent mutants. One accepted a point for a zero-exponent currency (that guard is redundant with the decimal-count check). One kept adding digits after the too-large flag was set (the flag is never reset, so the result is the same). No test gap.
+
+\- Hash test (task 5): the known hash f586f212 was computed once with node and pinned in a test. The independent TextEncoder reference implementation in ids.testkit.ts is what really guards the hash.
 
 \## Resume in a new chat
 

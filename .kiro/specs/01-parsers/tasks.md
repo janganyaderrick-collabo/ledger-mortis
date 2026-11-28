@@ -66,7 +66,7 @@ This plan builds Module 1 in dependency order. It starts with the lint rules tha
   - Tag each test with Req N.M.
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.7, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.9, 20.1, 20.12, 20.13_
 
-- [ ] 6. csv-reader.ts with csv-reader.testkit.ts and example tests
+- [x] 6. csv-reader.ts with csv-reader.testkit.ts and example tests
   - Create `src/core/parsers/csv-reader.ts` with `CsvRecord` (fields, startLine, rawText), `CsvReadOutcome`, `chooseDelimiter` and `readCsv` (Algorithm E): LF, CRLF and a lone CR as an ordinary character, header line is the first non-blank line, delimiter by count outside quotes with the tie order comma, semicolon, tab, doubled quotes, delimiters and line breaks inside quotes, quote kept as a character in an unquoted field, blank lines skipped, the "Malformed quoted field" and "Unterminated quote" issues with `startLine` and `buildExcerpt(rawText)`. A bad quote in the header line gives a header with no fields (Decisions D5(a)); delimiters of a header cell that spans lines are counted on the first physical line (D5(b)).
   - Create `src/core/parsers/csv-reader.testkit.ts`: the Test_Only_Helper CSV writer (quotes a field exactly when it holds the delimiter, a quote or a line break; doubles inner quotes), malformed-record generators and line-break and blank-line mix generators. Task 7 reuses this file. No forbidden names.
   - Create `src/core/parsers/csv-reader.test.ts` (examples): every criterion of Req 9.1 to 9.11 at reader level (CRLF/LF mix, quoted delimiter, quoted line break, `""`, quote inside an unquoted field, text after a closing quote, unterminated quote consuming the rest, blank lines, BOM-free line numbers, excerpt of a multi-line record).
